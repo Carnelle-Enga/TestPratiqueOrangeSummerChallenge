@@ -3,10 +3,12 @@ const list = document.getElementById("employeList");
 
 let employees = JSON.parse(localStorage.getItem("employees")) || [];
 
+// fonction pour enregistrer la liste des employés dans le localStorage
 function saveToLocalStorage() {
   localStorage.setItem("employees", JSON.stringify(employees));
 }
 
+// fonction pour lister les employés sur le page
 function listEmployes() {
   list.innerHTML = "";
   employees.forEach((emp, index) => {
@@ -23,6 +25,7 @@ function listEmployes() {
   });
 }
 
+// fonction pour supprimmer un employé
 function deleteEmploye(index) {
     const emp = employees[index];
     if (confirm(`Voulez-vous vraiment supprimer  l'employé ${emp.firstName} ${emp.lastName} ?`)) {
@@ -32,6 +35,7 @@ function deleteEmploye(index) {
     }
 }
 
+// Gestion de l'envoi du formulaire : valide les champs, ajoute l'employé à la liste, met à jour le localStorage et réinitialise le formulaire.
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -53,6 +57,7 @@ form.addEventListener("submit", (e) => {
   form.reset();
 });
 
+// fonction pour valider l'email
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }

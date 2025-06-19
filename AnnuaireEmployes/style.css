@@ -82,7 +82,7 @@ li {
   padding: 0.7em;
   border-radius: 5px;
 }
-
+/* gestion du responsive sur les terminaux de petite taille */
 @media (max-width: 500px) {
   li {
     flex-direction: column;
