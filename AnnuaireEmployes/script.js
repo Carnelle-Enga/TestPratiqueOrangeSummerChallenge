@@ -13,9 +13,9 @@ function listEmployes() {
     const li = document.createElement("li");
     li.innerHTML = `
       <div>
-        <strong>${emp.lastName} ${emp.firstName}</strong><br>
-        ${emp.email} –<br>
-        ${emp.poste}
+        <strong>NOM(S) et PRENOM(S): ${emp.lastName} ${emp.firstName}</strong><br>
+        <strong>EMAIL : </strong> ${emp.email} <br>
+        <strong>POSTE : </strong>${emp.poste}
       </div>
       <button onclick="deleteEmploye(${index})">Supprimer</button>
     `;
