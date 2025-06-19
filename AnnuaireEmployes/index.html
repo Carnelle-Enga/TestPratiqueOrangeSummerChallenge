@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annuaire des Employés d'Orange </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+            <img class="logo" src="./ressorces/logo.png" alt="logo de l'application">
+          <h1>Annuaire des Employés d'Orange</h1>
+            <p>Bienvenue dans l'annuaire des employés d'Orange. Vous pouvez ajouter de nouveaux 
+                employés et consulter la liste des employés existants.</p>
+    </header>
+    
+    <main class="container">
+        <h2>Ajouter un Employé</h2>
+
+        <form id="employeForm">
+      <input type="text" id="lastName" placeholder="Nom" required />
+      <input type="text" id="firstName" placeholder="Prénom" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="poste" placeholder="Poste/Fonction" required />
+      <button type="submit">Ajouter</button>
+    </form>
+
+    <section id="employeListContainer">
+      <h2>Liste des employés</h2>
+      <ul id="employeList"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <footer>
+            <p>&copy; 2025 Orange – Projet </p>
+            <p>Ce projet est une démonstration de la création d'un annuaire d'employés de l'entreprise Orange .</p>
+            <img src="./ressorces/orange.png" alt="">
+  </footer>
+</body>
+</html>
